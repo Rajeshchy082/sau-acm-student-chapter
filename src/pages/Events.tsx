@@ -283,19 +283,19 @@ const Events: React.FC = () => {
         // Events list view
         <div className="space-y-6 max-w-4xl mx-auto">
           <div
-            className="card flex flex-col md:flex-row gap-6 cursor-pointer group"
+            className="card flex flex-col md:flex-row items-stretch gap-6 cursor-pointer group"
             onClick={() => setShowDetails(true)}
           >
-            <div className="md:w-1/3">
-              <div className="rounded-xl overflow-hidden">
+            <div className="md:w-1/5">
+              <div className="rounded-xl overflow-hidden h-48 md:h-full">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
-            <div className="flex-grow">
+            <div className="md:w-4/5 flex flex-col">
               <h2 className="text-xl font-bold mb-2">{event.title}</h2>
               <span className="inline-flex items-center text-green-600 font-medium mb-4">
                 <CheckCircle className="w-4 h-4 mr-2" /> {event.status}
@@ -314,15 +314,10 @@ const Events: React.FC = () => {
                   {event.location}
                 </p>
               </div>
-              <p className="mt-4 line-clamp-2">
-                The workshop was designed to introduce students to Git and GitHub—
-                fundamental tools for version control and collaborative development.
-              </p>
-            </div>
-            <div className="md:w-32 flex items-center justify-center">
-              <button className="btn-primary w-full md:w-auto whitespace-nowrap">
-                View Highlights
-              </button>
+              <p className="mt-4 line-clamp-2">{event.description}</p>
+              <div className="mt-6 md:mt-auto pt-2">
+                <button className="btn-primary whitespace-nowrap">View Highlights</button>
+              </div>
             </div>
           </div>
         </div>
