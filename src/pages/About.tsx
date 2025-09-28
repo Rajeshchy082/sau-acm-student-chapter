@@ -158,7 +158,7 @@ const teamMembers: TeamMember[] = [
   // PR team
   {
     name: "Prashant Singh",
-    role: "PR Lead",
+    role: "PR Member",
     subRole: "",
     icon: <Globe className="w-6 h-6 text-black" />,
     image: PrashantSingh,
